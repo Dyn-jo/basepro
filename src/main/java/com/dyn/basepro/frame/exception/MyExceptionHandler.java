@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ *@description: 异常处理
+ *@author: dyn
+ *@create: 2020-03-10 21:11
+ */
 @Slf4j
 @ControllerAdvice
 public class MyExceptionHandler {

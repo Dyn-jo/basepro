@@ -10,7 +10,11 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ *@description: 代码生成器
+ *@author: dyn
+ *@create: 2020-03-10 21:11
+ */
 public class GenerateUtil {
 
     public static void main(String[] args) {

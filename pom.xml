@@ -117,6 +117,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--这样打的jar里会多一个目录BOOT-INF,其他项目无法引用该jar，设置以下属性解决该问题-->
                 <configuration>
                     <skip>true</skip>
                 </configuration>

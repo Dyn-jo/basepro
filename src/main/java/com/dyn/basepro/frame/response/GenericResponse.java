@@ -2,6 +2,11 @@ package com.dyn.basepro.frame.response;
 
 import lombok.Getter;
 
+/**
+ *@description: 通用返回类型
+ *@author: dyn
+ *@create: 2020-03-10 21:11
+ */
 @Getter
 public class GenericResponse<T> {
 
@@ -17,7 +22,7 @@ public class GenericResponse<T> {
         this.data = data;
     }
 
-    private GenericResponse(com.dyn.basepro.response.CodeMessage cm, T data) {
+    private GenericResponse(CodeMessage cm, T data) {
         if (cm == null) {
             return;
         }
@@ -42,7 +47,7 @@ public class GenericResponse<T> {
      * @param data
      * @return
      */
-    public static <T> GenericResponse<T> build(com.dyn.basepro.response.CodeMessage cm, T data) {
+    public static <T> GenericResponse<T> build(CodeMessage cm, T data) {
         return new GenericResponse<T>(cm, data);
     }
 

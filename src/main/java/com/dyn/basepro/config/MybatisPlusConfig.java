@@ -1,4 +1,4 @@
-package  com.dyn.basepro.config;
+package com.dyn.basepro.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
@@ -8,11 +8,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * 开启分页功能
+ *@description: 开启分页功能
+ *@author: dyn
+ *@create: 2020-03-10 21:11
  */
 @EnableTransactionManagement
 @Configuration
-@MapperScan("com.dyn.demo.*.mapper*")
+@MapperScan("com.dyn.*.mapper.*")
 public class MybatisPlusConfig {
 
     @Bean

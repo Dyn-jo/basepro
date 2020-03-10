@@ -1,4 +1,4 @@
-package  com.dyn.basepro.response;
+package com.dyn.basepro.frame.response;
 
 import lombok.Data;
 
