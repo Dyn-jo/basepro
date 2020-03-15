@@ -1,6 +1,7 @@
 package com.dyn.basepro.frame.exception;
 
-import com.dyn.basepro.response.CodeMessage;
+import com.dyn.basepro.frame.response.CodeMessage;
+import com.dyn.basepro.frame.response.ResultCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -33,7 +34,7 @@ public class MyExceptionHandler {
     public CodeMessage Exception(Exception e) {
 
         log.error(e.getMessage(), e);
-        return ErrorCodes.SYSTEM_ERROR;
+        return ResultCode.SYSTEM_ERROR;
     }
 
 }

@@ -1,6 +1,6 @@
 package   com.dyn.basepro.frame.exception;
 
-import  com.dyn.basepro.response.CodeMessage;
+import com.dyn.basepro.frame.response.CodeMessage;
 import lombok.Getter;
 
 @Getter
