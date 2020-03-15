@@ -1,4 +1,4 @@
-package com.dyn.basepro.config;
+package com.dyn.basepro.config.swagger;
 
 import com.dyn.basepro.constant.CommonCons;
 import org.springframework.context.annotation.Bean;
@@ -34,7 +34,6 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("springboot利用swagger构建api文档")
                 .description("简单优雅的restful风格")
-                .termsOfServiceUrl("http://blog.csdn.net/forezp")
                 .version("1.0")
                 .build();
     }

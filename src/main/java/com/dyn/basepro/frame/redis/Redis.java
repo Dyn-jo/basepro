@@ -1,4 +1,4 @@
-package  com.dyn.basepro.frame.redis;
+package com.dyn.basepro.frame.redis;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

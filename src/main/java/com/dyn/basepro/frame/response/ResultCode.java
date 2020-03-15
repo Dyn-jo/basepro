@@ -12,4 +12,20 @@ public interface ResultCode {
 
     CodeMessage SYSTEM_ERROR = CodeMessage.of("9999", "系统异常！");
 
+    // 登录鉴权
+    CodeMessage VALIDATE_FAILED = CodeMessage.of("1001", "参数检验失败！");
+
+    CodeMessage UNAUTHORIZED = CodeMessage.of("1002", "暂未登录或token已经过期！");
+
+    CodeMessage FORBIDDEN = CodeMessage.of("1003", "没有相关权限！");
+
+    // db相关
+    CodeMessage SELECT_FAILED = CodeMessage.of("2001", "查询失败！");
+
+    CodeMessage SAVE_FAILED = CodeMessage.of("2002", "保存失败！");
+
+    CodeMessage UPDATE_FAILED = CodeMessage.of("2003", "更新失败！");
+
+    CodeMessage DELETE_FAILED = CodeMessage.of("2004", "删除失败！");
+
 }

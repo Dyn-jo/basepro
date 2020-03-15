@@ -1,8 +1,8 @@
-package  com.dyn.basepro.frame.redis.impl;
+package com.dyn.basepro.frame.redis.impl;
 
-import   com.dyn.basepro.frame.exception.BusinessException;
-import   com.dyn.basepro.frame.exception.ErrorCodes;
-import  com.dyn.basepro.frame.redis.RedisConst;
+import com.dyn.basepro.frame.exception.BusinessException;
+import com.dyn.basepro.frame.response.ResultCode;
+import com.dyn.basepro.frame.redis.RedisConst;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.JedisPool;
 
@@ -86,7 +86,7 @@ public class JedisPoolService {
 
     public JedisPool switchCacheDB(int database) throws BusinessException {
         if (!jedisPools.containsKey(database)) {
-            throw new BusinessException(ErrorCodes.SYSTEM_ERROR);
+            throw new BusinessException(ResultCode.SYSTEM_ERROR);
         }
         return jedisPools.get(database);
     }

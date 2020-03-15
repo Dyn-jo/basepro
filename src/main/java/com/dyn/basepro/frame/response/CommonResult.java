@@ -8,7 +8,7 @@ import lombok.Getter;
  *@create: 2020-03-10 21:11
  */
 @Getter
-public class GenericResponse<T> {
+public class CommonResult<T> {
 
     private String code;
 
@@ -16,13 +16,13 @@ public class GenericResponse<T> {
 
     private T data;
 
-    private GenericResponse(T data) {
+    private CommonResult(T data) {
         this.code = "0000";
         this.message = "成功";
         this.data = data;
     }
 
-    private GenericResponse(CodeMessage cm, T data) {
+    private CommonResult(CodeMessage cm, T data) {
         if (cm == null) {
             return;
         }
@@ -36,8 +36,8 @@ public class GenericResponse<T> {
      *
      * @return
      */
-    public static <T> GenericResponse<T> build(T data) {
-        return new GenericResponse<T>(data);
+    public static <T> CommonResult<T> build(T data) {
+        return new CommonResult<T>(data);
     }
 
     /**
@@ -47,8 +47,8 @@ public class GenericResponse<T> {
      * @param data
      * @return
      */
-    public static <T> GenericResponse<T> build(CodeMessage cm, T data) {
-        return new GenericResponse<T>(cm, data);
+    public static <T> CommonResult<T> build(CodeMessage cm, T data) {
+        return new CommonResult<T>(cm, data);
     }
 
 }

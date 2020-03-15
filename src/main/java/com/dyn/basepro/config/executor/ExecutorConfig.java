@@ -1,4 +1,4 @@
-package com.dyn.basepro.config;
+package com.dyn.basepro.config.executor;
 
 import com.dyn.basepro.properties.ThreadPoolProp;
 import org.springframework.beans.factory.annotation.Autowired;

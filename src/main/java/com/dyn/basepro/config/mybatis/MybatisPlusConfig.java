@@ -1,4 +1,4 @@
-package com.dyn.basepro.config;
+package com.dyn.basepro.config.mybatis;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @EnableTransactionManagement
 @Configuration
-@MapperScan("com.dyn.*.mapper.*")
+@MapperScan("com.dyn.*.*.mapper.*")
 public class MybatisPlusConfig {
 
     @Bean

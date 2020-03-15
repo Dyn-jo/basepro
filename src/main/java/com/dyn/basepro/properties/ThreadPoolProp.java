@@ -1,4 +1,4 @@
-package  com.dyn.basepro.properties;
+package com.dyn.basepro.properties;
 
 import lombok.Data;
 

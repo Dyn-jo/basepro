@@ -10,6 +10,7 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  *@description: 代码生成器
  *@author: dyn
@@ -17,20 +18,20 @@ import java.util.List;
  */
 public class GenerateUtil {
 
-    public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/practice?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-        String driverName = "com.mysql.cj.jdbc.Driver";
-        String username = "root";
-        String password = "root";
-        String moduleName = "springclouddemo";
-        String parent = "com.dyn.demo";
-        String tableNames = "user,account";
+//    public static void main(String[] args) {
+//        String url = "jdbc:mysql://localhost:3306/practice?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+//        String driverName = "com.mysql.cj.jdbc.Driver";
+//        String username = "root";
+//        String password = "root";
+//        String moduleName = "springclouddemo";
+//        String parent = "com.dyn.demo";
+//        String tableNames = "user,account";
+//
+//        generate(url, driverName, username, password, moduleName, parent, tableNames);
+//
+//    }
 
-        Generate(url, driverName, username, password, moduleName, parent, tableNames);
-
-    }
-
-    private static void Generate(String url, String driverName, String username, String password, String moduleName, String parent, String tableNames) {
+    public static void generate(String url, String driverName, String username, String password, String moduleName, String parent, String tableNames) {
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
 
@@ -40,7 +41,9 @@ public class GenerateUtil {
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("dyn");
         gc.setOpen(false);
-        // gc.setSwagger2(true); 实体属性 Swagger2 注解
+        gc.setSwagger2(true);// 实体属性 Swagger2 注解
+        // 文件覆盖
+        gc.setFileOverride(true);
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
@@ -60,6 +63,7 @@ public class GenerateUtil {
 
         // 自定义配置
         InjectionConfig cfg = new InjectionConfig() {
+
             @Override
             public void initMap() {
                 // to do nothing
@@ -109,10 +113,12 @@ public class GenerateUtil {
         strategy.setSuperMapperClass(" com.dyn.basepro.frame.base.MyBaseMapper");
         strategy.setSuperServiceClass(" com.dyn.basepro.frame.base.MyBaseService");
         strategy.setSuperServiceImplClass(" com.dyn.basepro.frame.base.MyServiceImpl");
+
         strategy.setEntityLombokModel(true);
+        strategy.setEntityTableFieldAnnotationEnable(true);
         strategy.setRestControllerStyle(true);
 
-        strategy.setInclude(tableNames.split(","));
+        strategy.setInclude(tableNames.split(", "));
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);

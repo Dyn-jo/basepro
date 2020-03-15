@@ -1,7 +1,7 @@
-package  com.dyn.basepro.frame.redis.impl;
+package com.dyn.basepro.frame.redis.impl;
 
-import   com.dyn.basepro.frame.exception.BusinessException;
-import  com.dyn.basepro.frame.redis.BaseRedisService;
+import com.dyn.basepro.frame.exception.BusinessException;
+import com.dyn.basepro.frame.redis.BaseRedisService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

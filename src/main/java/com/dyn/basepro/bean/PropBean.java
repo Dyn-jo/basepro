@@ -1,4 +1,4 @@
-package  com.dyn.basepro.bean;
+package com.dyn.basepro.bean;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,6 +14,7 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 @Data
 public class PropBean {
+
     // 如果不存在该配置，默认值为null
     @Value("${info:}")
     private String info;

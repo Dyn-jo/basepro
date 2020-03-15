@@ -1,4 +1,4 @@
-package  com.dyn.basepro.frame.redis;
+package com.dyn.basepro.frame.redis;
 
 public interface RedisConst {
 
