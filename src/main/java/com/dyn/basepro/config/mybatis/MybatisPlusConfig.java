@@ -2,6 +2,7 @@ package com.dyn.basepro.config.mybatis;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
+import com.dyn.basepro.constant.CommonCons;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @EnableTransactionManagement
 @Configuration
-@MapperScan("com.dyn.*.*.mapper.*")
+@MapperScan(CommonCons.MAPPER_SCAN)
 public class MybatisPlusConfig {
 
     @Bean

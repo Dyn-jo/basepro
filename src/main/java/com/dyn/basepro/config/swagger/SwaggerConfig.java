@@ -25,7 +25,8 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage(CommonCons.BASE_PACKAGE))
+                //为当前包下controller生成API文档
+                .apis(RequestHandlerSelectors.basePackage(CommonCons.SWAGGER_BASE_PACKAGE))
                 .paths(PathSelectors.any())
                 .build();
     }
