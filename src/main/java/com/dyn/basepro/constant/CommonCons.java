@@ -7,6 +7,7 @@ package com.dyn.basepro.constant;
  */
 public interface CommonCons {
 
-    String BASE_PACKAGE = "com.dyn.*.*.controller";
+    String SWAGGER_BASE_PACKAGE = "com.dyn";
+    String MAPPER_SCAN = "com.dyn.*.*.mapper";
 
 }

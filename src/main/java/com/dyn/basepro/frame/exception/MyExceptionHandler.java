@@ -1,6 +1,7 @@
 package com.dyn.basepro.frame.exception;
 
 import com.dyn.basepro.frame.response.CodeMessage;
+import com.dyn.basepro.frame.response.CommonResult;
 import com.dyn.basepro.frame.response.ResultCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -24,17 +25,18 @@ public class MyExceptionHandler {
      */
     @ExceptionHandler(value = BusinessException.class)
     @ResponseBody
-    public CodeMessage handleBusinessException(BusinessException e) {
+    public CommonResult handleBusinessException(BusinessException e) {
         log.error(e.getMessage(), e);
-        return CodeMessage.of(e.getCode(), e.getMessage());
+
+        return CommonResult.build(CodeMessage.of(e.getCode(), e.getMessage()));
     }
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
-    public CodeMessage Exception(Exception e) {
+    public CommonResult Exception(Exception e) {
 
         log.error(e.getMessage(), e);
-        return ResultCode.SYSTEM_ERROR;
+        return CommonResult.build(ResultCode.SYSTEM_ERROR);
     }
 
 }

@@ -19,6 +19,10 @@ public interface ResultCode {
 
     CodeMessage FORBIDDEN = CodeMessage.of("1003", "没有相关权限！");
 
+    CodeMessage LOGIN_FAILED = CodeMessage.of("1004", "用户名或密码错误！");
+
+
+
     // db相关
     CodeMessage SELECT_FAILED = CodeMessage.of("2001", "查询失败！");
 

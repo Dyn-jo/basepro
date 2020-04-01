@@ -16,10 +16,9 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 public class ExecutorConfig {
 
     @Autowired
-    ThreadPoolProp threadPoolProp;
+    private ThreadPoolProp threadPoolProp;
 
     @Bean
-
     public AsyncTaskExecutor asyncTaskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         executor.setCorePoolSize(threadPoolProp.getCorePoolSize());
